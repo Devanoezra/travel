@@ -1,0 +1,179 @@
+body{
+  background-color: #F1EEE8;
+}
+/* INTRO with PARALLAX */
+.intro {
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.intro > .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(86, 86, 86, 0.5);
+  z-index: 0;
+}
+.intro-content {
+  display: block;
+  margin: auto;
+  color: white;
+  z-index: 0;
+  text-align: center;
+}
+.intro-content .title {
+  font-size: 60px;
+  transform: translateY(-10px);
+  text-align: center;
+}
+.intro-content .description {
+  font-family: opensans-light;
+  font-style: italic;
+  text-align: center;
+}
+/* END of INTRO */
+
+/*PAGE WRAPPER*/
+.container {
+  width: 85%;
+  margin: auto;
+  display: block;
+  padding: 20px 0 50px;
+}
+.tips{
+  position: relative;
+  padding: 50px;
+  height: 100%;
+  width: 100%;
+  margin: 0px auto;
+  display: grid;
+  grid-gap: 2em;
+  box-sizing: border-box;
+}
+.tips .tips-content-img{
+  background: url('../images/bromo.jpg');
+  background-size: cover !important;
+  height: 350px;
+  width: 100%;
+}
+.tips .tips-content{
+  height: auto;
+  background-color: white;
+  margin-bottom: 50px;
+}
+.tips .tips-content p{
+  padding: 50px;
+  line-height: 20px;
+}
+.tips .other-tips{
+  padding: 15px;
+  height: auto;
+  background-color: white;
+}
+.tips .other-tips h1{
+  height: auto;
+}
+.tips .other-tips a{
+  padding: 0 5px;
+  height: auto;
+}
+.tips .other-tips ul{
+  padding: 10px;
+  list-style: none;
+}
+.tips .other-tips li{
+  padding-top: 10px;
+}
+.tips .other-tips .img-other{
+  padding: 0 20px;
+  width: 50px;
+  height: 40px;
+  float: left;
+}
+.tips .other-tips .img-other img{
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+}
+.tips .other-tips p {
+  font-size: 14px;
+  color: rgb(119, 119, 119);
+}
+.tips .gallery{
+  margin-top: 20px;
+  padding: 15px;
+  height: auto;
+  background-color: white;
+}
+.tips .gallery h1{
+  height: auto;
+}
+.tips .gallery .gallery-content{
+  display: grid;
+  width: 100%;
+  margin: 0px auto;
+  padding: 10px 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.tips .gallery .gallery-content .item{
+  grid-auto-rows: minmax(80px, auto);
+  background-position: center center !important;
+  background-size: cover !important;
+  box-sizing: border-box;
+  height: 80px;
+  width: 100%;
+}
+.comments {
+  height: auto;
+  background-color: white;
+  width: 65%;
+  clear: both;
+  margin-bottom: 50px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.comments > .title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.comments-wrapper .item {
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  border-bottom: 1px solid rgb(119, 119, 119);
+}
+.comments-wrapper .item .desc .date {
+  color: rgb(119, 119, 119);
+}
+.comments-wrapper .item .desc .message {
+  margin-top: 10px;
+}
+/* STYLE for MEDIUM and HIGHER SCREEN */
+@media screen and (min-width: 768px) {
+  .tips {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+/* STYLE for SMALL SCREEN */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .tips {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* STYLE for EXTRA SMALL SCREEN */
+@media screen and (max-width: 575px) {
+  .tips {
+    grid-template-columns: 1fr;
+  }
+}
